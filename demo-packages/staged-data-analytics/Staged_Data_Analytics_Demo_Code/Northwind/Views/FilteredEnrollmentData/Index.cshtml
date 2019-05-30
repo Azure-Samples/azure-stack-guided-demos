@@ -1,0 +1,242 @@
+﻿@model IEnumerable<Northwind.Models.FilteredEnrollmentData>
+@{
+    ViewData["Title"] = "Northwind Insurance";
+    ViewData["activePage"] = "azuredata";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background: none;
+            background-color: #0d8ebd;
+        }
+
+        #filtereddata {
+            margin-top: 140px;
+            padding-top: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 80px;
+            background-color: white;
+        }
+
+        #filtereddatatable {
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            overflow-x: scroll;
+            background-color: #f7f7f7;
+        }
+
+        table {
+            background-color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        thead {
+            background-color: #0d8ebd;
+            color: white;
+        }
+    </style>
+
+
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Azure Filtered Data</title>
+</head>
+<body>
+    <section id="filtereddata" class="filtereddata">
+        <div id="filtereddatatable" class="filtereddatatable">
+            <table class="table" border="1" cellpadding="3" align="center">
+                <thead>
+                    <tr>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.EnrollmentID)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.InsurancePlanID)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.SubscriberID)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.PlanYear)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.ConfirmationCode)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.TimeStamp)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.FirstName)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.MiddleName)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.LastName)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.AddressLine1)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.AddressLine2)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.City)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.State)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.ZipCode)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.County)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.PhoneNumber)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.EmailAddress)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.IsMilitary)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.IsOnDisability)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.IsOnMedicare)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.IsStudent)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.IsUSCitizen)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.AlimonyChildSupport)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.EmploymentIncome)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.InvestmentIncome)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.HouseholdMemberID)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.Relationship)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.Gender)
+                        </th>
+                        <th align="center">
+                            @Html.DisplayNameFor(model => model.TobaccoUse)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.EnrollmentID)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.InsurancePlanID)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.SubscriberID)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.PlanYear)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.ConfirmationCode)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.TimeStamp)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.FirstName)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.MiddleName)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.LastName)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.AddressLine1)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.AddressLine2)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.City)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.State)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.ZipCode)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.County)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.PhoneNumber)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.EmailAddress)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.IsMilitary)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.IsOnDisability)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.IsOnMedicare)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.IsStudent)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.IsUSCitizen)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.AlimonyChildSupport)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.EmploymentIncome)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.InvestmentIncome)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.HouseholdMemberID)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.Relationship)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.Gender)
+                            </td>
+                            <td align="center">
+                                @Html.DisplayFor(modelItem => item.TobaccoUse)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+</html>
